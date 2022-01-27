@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 import express from "express";
 const app=express();
 // import { express } from 'express'
-
+const port=process.env.port ///FOR HEROKU
 
 
 fetch(
@@ -70,6 +70,8 @@ app.get("/",(req,res)=>{
 })()
   
 });
-app.listen(8000,()=>{
-  console.log("listening the port at 8k")
+app.listen(port,()=>{   
+  console.log(`listening the port at ${port}`)
 })
+// for heroku 
+//otherwise replace port by 8000
