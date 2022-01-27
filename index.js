@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 import express from "express";
 const app=express();
 // import { express } from 'express'
-const port=process.env.port ///FOR HEROKU
+const port=process.env.port || 8000///FOR HEROKU
 
 
 fetch(
